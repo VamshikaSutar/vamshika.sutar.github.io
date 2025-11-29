@@ -68,10 +68,10 @@
       <h1>Hi, I'm Vamshika Sutar</h1>
       <p>
         AI Research Enthusiast<br>
-        Bachelors in Civil Engineering & Minor in Computer Science & Engineering
+        Bachelor's in Civil Engineering & Minor in Computer Science & Engineering
       </p>
       <p>
-        Research Interests: Computer Vision, Deep Learning, Intelligent Mobility
+        Research Interests: Computer Vision and Deep Learning
       </p>
       <p style="margin-top:6px;font-size:13px;color:#d1d5db;">
         <a href="mailto:vamshikasutar.iitb@gmail.com" style="color:#d1d5db;text-decoration:none;">Contact: vamshikasutar.iitb@gmail.com</a>
@@ -135,7 +135,7 @@ const DATA = {
     research5: {
       title: "Speech Signal Analysis for Parkinson’s Disease detection",
       popupHeading: "Speech Signal Analysis for Parkinson’s Disease detection",
-      image: "PD.png",
+      image: "PD (1).png",
       popupLines: [
         "Research and Development Project",
         "Guide: Prof. Nirmal Punjabi",
@@ -225,7 +225,7 @@ const DATA = {
       image: "Screenshot 2025-10-11 005117.png",
       popupLines: [
         "Analyst",
-        "Data, tech and AI",
+        "Data, tech, and AI",
         "India Management Consulting Team"
       ]
     }
@@ -233,8 +233,8 @@ const DATA = {
 
   publications: {
     publication1: { title: "Spatiotemporal deep learning models for detection of rapid intensification in cyclones", paper: "https://www.arxiv.org/abs/2506.08397", image: "Screenshot 2025-10-11 003517.png" },
-    publication2: { title: "Learning-Based Vision Systems for Semi-Autonomous Forklift Operation", paper: "https://arxiv.org/abs/2511.06295", image: "forklift.png" },
-    publication4: { title: "Parkinson’s Disease Detection Using ComParE Features", paper: "https://drive.google.com/file/d/1NlpaMvES_DTwvW1Q-hW7irqP3HlNEgvz/view?usp=sharing", image: "PD.png" }
+    publication2: { title: "Learning-Based Vision Systems for Semi-Autonomous Forklift Operation in Industrial Warehouse Environments", paper: "https://arxiv.org/abs/2511.06295", image: "forklift (1).png" },
+    publication4: { title: "Parkinson’s Disease Detection Using ComParE Features", paper: "https://drive.google.com/file/d/1NlpaMvES_DTwvW1Q-hW7irqP3HlNEgvz/view?usp=sharing", image: "PD (1).png" }
   },
 
   conferences: {
@@ -348,7 +348,7 @@ function renderConferences(){
     const paperUrl = it.paper && it.paper !== '#' ? it.paper : '';
     const img = it.image ? escapeHtml(it.image) : 'images/conferences.png';
     card.innerHTML = `<img src="${img}" alt="${escapeHtml(it.title)}"><h3>${escapeHtml(it.title)}</h3>
-      ${paperUrl ? `<a class="paper-link" href="${escapeHtml(paperUrl)}" target="_blank" rel="noopener">Paper</a>` : `<a class="paper-link" href="#" onclick="alert('No manuscript URL set. Edit DATA.conferences.${k}.paper')">Paper</a>`}`;
+      ${paperUrl ? `<a class="paper-link" href="${escapeHtml(paperUrl)}" target="_blank" rel="noopener">Presentation</a>` : `<a class="paper-link" href="#" onclick="alert('No manuscript URL set. Edit DATA.conferences.${k}.paper')">Presentation</a>`}`;
     card.addEventListener('click', ()=>{
       if(paperUrl) window.open(paperUrl,'_blank','noopener');
       else alert('No manuscript URL set. Edit DATA.conferences.'+k+'.paper in the source.');
